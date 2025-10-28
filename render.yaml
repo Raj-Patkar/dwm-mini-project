@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: employee-attrition
+    env: python
+    rootDir: Backend
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: PORT
+        value: 5000

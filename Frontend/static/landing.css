@@ -1,0 +1,384 @@
+/* -------------------------------------
+LANDING PAGE SPECIFIC STYLES (NEWLY ADDED)
+These styles are for the multi-section landing page (home.html)
+------------------------------------- */
+
+/* --- Root Variables for consistency --- */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #4e502c;
+    --accent-color: #f5c242;
+    --light-text-color: #555;
+    --container-background: #ffffff;
+    --section-background: #f8f9fa; /* Light Gray for sections */
+    --shadow-color-soft: rgba(0, 0, 0, 0.08);
+}
+
+/* Base Body & Layout */
+body.home-page {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--section-background);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: var(--container-background);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px var(--shadow-color-soft);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 30px;
+}
+
+.main-header nav ul li a {
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 1.3em;
+    color: var(--light-text-color);
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- General Button Styles --- */
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: 0.3s ease;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background-color: #7f8c8d;
+}
+
+.secondary-btn:hover {
+    background-color: #616a6b;
+    transform: translateY(-3px);
+}
+
+/* --- Features Section --- */
+.features {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--container-background);
+}
+
+.features h2 {
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.features .subtext {
+    font-size: 1.1em;
+    color: var(--light-text-color);
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--accent-color);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--secondary-color);
+    color: #f4f4f4;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-footer p {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #a0a0a0;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* --- Features Carousel for Hero Section --- */
+.features-carousel {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.features-carousel .feature-card-scroll {
+    display: inline-block;
+    background-color: var(--container-background);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin: 15px;
+    text-align: center;
+    width: 250px;
+    white-space: normal;
+    vertical-align: top; /* Align items at the top */
+    animation: scroll-left 20s linear infinite;
+}
+
+.features-carousel .feature-card-scroll:hover {
+    animation-play-state: paused;
+}
+
+.features-carousel .feature-card-scroll i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.features-carousel .feature-card-scroll h3 {
+    font-size: 1.3em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.features-carousel .feature-card-scroll p {
+    font-size: 0.9em;
+    color: var(--light-text-color);
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Responsive adjustments for carousel */
+@media (max-width: 768px) {
+    .header-container,
+    .main-footer .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-header nav ul li {
+        margin: 0 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-text p {
+        font-size: 1.1em;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .hero-image {
+        display: none; /* Hide image on smaller screens */
+    }
+
+    .features h2 {
+        font-size: 2em;
+    }
+
+    .features .subtext {
+        font-size: 1em;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .footer-links {
+        margin-top: 15px;
+    }
+
+    .footer-links a {
+        margin: 0 10px;
+    }
+
+    .features-carousel {
+        margin-top: 30px;
+    }
+
+    .features-carousel .feature-card-scroll {
+        width: 200px;
+        padding: 20px;
+        margin: 10px;
+        animation: scroll-left-sm 30s linear infinite; /* Slower scroll for smaller screens */
+    }
+}
+
+@keyframes scroll-left-sm {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2em;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .features h2 {
+        font-size: 1.8em;
+    }
+}

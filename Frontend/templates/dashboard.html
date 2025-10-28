@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attrition Dashboard</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fafafa;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #1565c0;
+            margin-bottom: 30px;
+        }
+        .chart {
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 90%;
+        }
+        a {
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+            color: white;
+            background: #1976d2;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+        a:hover {
+            background: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">🏠 Home</a>
+    <h1>Employee Attrition Dashboard</h1>
+
+    {% for graph in graphs %}
+        <div class="chart">{{ graph|safe }}</div>
+    {% endfor %}
+</body>
+</html>

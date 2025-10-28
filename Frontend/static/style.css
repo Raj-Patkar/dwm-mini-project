@@ -1,0 +1,150 @@
+/* General Body and Typography */
+body {
+    font-family: 'Roboto', sans-serif; /* Modern classic font */
+    background: linear-gradient(to right, #ece9e6, #ffffff); /* Soft gradient background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+/* Container Styling */
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* More pronounced, softer shadow */
+    width: 100%;
+    max-width: 700px; /* Increased max-width for better form layout */
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Headings */
+h1 {
+    color: #2c3e50; /* Darker, more professional heading color */
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 2.2em;
+}
+
+/* Form Layout */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for inputs */
+    gap: 20px; /* Increased gap for better spacing */
+    text-align: left;
+}
+
+/* Form Group for Label and Input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+/* Input and Select Fields */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #fdfdfd;
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #3498db; /* Highlight on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Full-width elements (e.g., submit button) */
+.full-width {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+button {
+    background-color: #3498db; /* A vibrant, professional blue */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Result Page Specific Styles */
+.container.result {
+    max-width: 500px;
+    padding: 50px;
+}
+
+.result p.prediction {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.result p.probability {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.result a {
+    display: inline-block;
+    background-color: #7f8c8d; /* A neutral grey for the back button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.result a:hover {
+    background-color: #95a5a6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr; /* Stack inputs on small screens */
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+    .container {
+        margin: 20px;
+        padding: 25px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+}

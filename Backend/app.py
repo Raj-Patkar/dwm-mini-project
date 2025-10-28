@@ -6,7 +6,7 @@ import os
 import plotly.express as px
 
 # Flask setup
-app = Flask(__name__, template_folder="../frontend/templates", static_folder="../frontend/static")
+app = Flask(__name__, template_folder="../Frontend/templates", static_folder="../Frontend/static")
 
 # ============================
 # Model Prediction Code
@@ -133,7 +133,9 @@ def predict():
 def dashboard():
     try:
         # Load dataset
-        df = pd.read_csv("HR-Employee-Attrition.csv")
+        csv_path = os.path.join(os.path.dirname(__file__), "HR-Employee-Attrition.csv")
+        df = pd.read_csv(csv_path)
+
 
         # --- Visualization 1: Overall Attrition ---
         fig1 = px.pie(df, names='Attrition', title='Overall Attrition Rate',
@@ -183,4 +185,4 @@ def dashboard():
 # ============================
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0', port=5000)
